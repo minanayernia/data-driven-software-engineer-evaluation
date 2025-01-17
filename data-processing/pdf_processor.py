@@ -1,42 +1,23 @@
 import os
-import multiprocessing
+import json
 import pdfplumber
-import csv
 
+def extract_text_from_pdf(pdf_path):
+    """
+    Extracts the text content from the PDF file, structured by pages.
+    Returns a dictionary with page numbers as keys.
+    """
+    extracted_data = {}
+    with pdfplumber.open(pdf_path) as pdf:
+        for i, page in enumerate(pdf.pages, start=1):
+            extracted_data[f"Page_{i}"] = page.extract_text() or ""
+    return extracted_data
 
-def extract_data_from_pdf(file_path):
-    try:
-        with pdfplumber.open(file_path) as pdf:
-            text = ''.join(page.extract_text() for page in pdf.pages)
-        return text
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return None
-
-def save_to_csv(data, output_path):
-    try:
-        with open(output_path, mode='w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerows(data)
-        print(f"Data saved to {output_path}")
-    except Exception as e:
-        print(f"Error saving data: {e}")
-
-def process_pdf(file_path, output_dir):
-    print(f"Processing: {file_path}")
-    data = extract_data_from_pdf(file_path)
-    if data:
-        # For this example, splitting data into lines and saving as rows
-        structured_data = [line.split() for line in data.split('\n') if line.strip()]
-        output_file = os.path.join(output_dir, os.path.basename(file_path).replace('.pdf', '.csv'))
-        save_to_csv(structured_data, output_file)
-
-def main():
-    input_dir = "./pdfs"
-    output_dir = "./output"
-
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+def process_pdfs(input_dir, output_file):
+    """
+    Processes all PDFs in the input directory and consolidates their data into a single JSON file.
+    """
+    all_pdfs_data = {}
 
     pdf_files = [os.path.join(input_dir, file) for file in os.listdir(input_dir) if file.endswith('.pdf')]
 
@@ -46,9 +27,35 @@ def main():
 
     print(f"Found {len(pdf_files)} PDF files.")
 
-    # Using multiprocessing for scalability
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        pool.starmap(process_pdf, [(file, output_dir) for file in pdf_files])
+    for file_path in pdf_files:
+        print(f"Processing: {file_path}")
+        pdf_name = os.path.basename(file_path)
+        pdf_content = extract_text_from_pdf(file_path)
+
+        # Add metadata
+        metadata = {
+            "file_name": pdf_name,
+            "total_pages": len(pdf_content)
+        }
+        pdf_content["metadata"] = metadata
+
+        # Add to consolidated data
+        all_pdfs_data[pdf_name] = pdf_content
+
+    # Save all data to a single JSON file
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(all_pdfs_data, f, ensure_ascii=False, indent=4)
+
+    print(f"Saved all PDF data to: {output_file}")
+
+def main():
+    input_dir = "./pdfs"
+    output_file = "./output/all_pdfs.json"
+
+    if not os.path.exists("./output"):
+        os.makedirs("./output")
+
+    process_pdfs(input_dir, output_file)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,24 @@
+{
+    "sample-1.pdf": {
+        "Page_1": "Your Company\n123 Your Street\nYour City, ST 12345\n(123) 456 - 7890\nProduct Brochure\nSeptember 04, 20XX\nProduct Overview\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod\ntincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis\nnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\nLorem ipsum\nNam liber tempor cum soluta nobis eleifend option\ncongue nihil imperdiet doming id quod mazim\nplacerat facer possim assum. Typi non habent\nclaritatem insitam; est usus legentis in iis qui facit\neorum claritatem.\nLorem ipsum\nDuis autem vel eum iriure dolor in hendrerit in\nvulputate velit esse molestie consequat, vel illum\ndolore eu feugiat nulla facilisis at vero eros et\naccumsan.\nDolor sit\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod\ntincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis\nnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+        "Page_2": "2\nDetails\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod\nmazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis\nqui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii\nlegunt saepius. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy\nnibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim\nveniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo\nconsequat.\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod\ntincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis\nnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum\ndolore eu feugiat nulla facilisis at vero eros et accumsan.",
+        "metadata": {
+            "file_name": "sample-1.pdf",
+            "total_pages": 2
+        }
+    },
+    "sample-2.pdf": {
+        "Page_1": "Your Name\n123 Your Street\nYour City, ST 12345\n(123) 456-7890\nno_reply@example.com\n4th September 20XX\nRonny Reader\nCEO, Company Name\n123 Address St\nAnytown, ST 12345\nDear Ms. Reader,\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy\nnibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi\nenim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis\nnisl ut aliquip ex ea commodo consequat.\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie\nconsequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet\ndoming id quod mazim placerat facer possim assum. Typi non habent\nclaritatem insitam; est usus legentis in iis qui facit eorum claritatem.\nInvestigationes demonstraverunt lectores legere me lius quod ii legunt\nsaepius.\nSincerely,\nYour Name",
+        "metadata": {
+            "file_name": "sample-2.pdf",
+            "total_pages": 1
+        }
+    },
+    "sample-3.pdf": {
+        "Page_1": "Hello\nI’m Your Name\n123 YOUR STREET\nYOUR CITY, ST 12345\n(123) 456-7890\nNO_REPLY@EXAMPLE.COM\nSkills\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi. Sed in consequat\nmi. Sed pulvinar lacinia felis eu finibus.\nExperience\nMONTH 20XX - PRESENT\nCompany Name, Location - Job Title\n● Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n● Aenean ac interdum nisi. Sed in consequat mi.\n● Sed in consequat mi, sed pulvinar lacinia felis eu finibus.\nMONTH 20XX - MONTH 20XX\nCompany Name, Location - Job Title\n● Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n● Aenean ac interdum nisi. Sed in consequat mi.\nMONTH 20XX - MONTH 20XX\nCompany Name, Location - Job Title\n● Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n● Aenean ac interdum nisi. Sed in consequat mi.\n● Sed pulvinar lacinia felis eu finibus.\nEducation\nMONTH 20XX - MONTH 20XX\nCollege Name, Location- Degree\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt\nut laoreet dolore.\nAwards\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nAenean ac interdum nisi.",
+        "metadata": {
+            "file_name": "sample-3.pdf",
+            "total_pages": 1
+        }
+    }
+}
